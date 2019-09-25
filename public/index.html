@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title id='mn'>Renzy_Chat_Example</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/a1813e4a30.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+	<script src="sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="sweetalert2.min.css">
+	<link rel="stylesheet" href="app.css">
+</head>
+
+<body style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStPyOETyYCk7N9ufynQ1JjYhUE1zUVYYrz3nvxwj-GObmJOKJf'); background-size: cover; background-repeat: no-repeat;">
+
+	
+
+		<header style="background-color:cornflowerblue; opacity: 0.3;">
+			<div class="container flex-column flex-center" style="opacity: 0.9">
+				<h1>Chat App</h1>
+				<p class="light-text">Chat Application for SD Elective by Kugmota using socket.io</p>
+			</div>
+		</header>
+
+		<div id="mainContent" class="container flex-grow-1 flex-column ">
+
+			<section id="login">
+
+				<div class="card">
+					<div class="box">
+						<div class="img">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8lAsncH5tL0-6bMTQOQHK5EgSYnYCMgCgfbDByOxi8WnFPZl9Tg">
+						</div>
+						<h4>Renzy Messenger<br></h4>
+						<center>
+							<form id="loginForm" class="flex">
+								<div class="input-group mb-3">
+									<label for="usr">Enter username:</label>
+									<input type="text" class="form-control" id="usernameInput" placeholder="Username" required autofocus>
+									<div class="input-group-append">
+										<br><br><button class="btn btn-primary" id="loginBtn" type="button">Log in</button>
+									</div>
+								</div>
+							</form>
+						</center>
+
+					</div>
+				</div>
+
+			</section>
+
+			<section id="chat" class="flex-grow-1 flex-column hidden">
+				<div class="card" id='card'>
+					<div class="card-body">
+						<div>
+							<button class="btn btn-info" id="logout" type="button">Sign Out</button>
+						</div>
+						<div>
+							<h4 id="online"><span id="user"></span>Active Users</h4>
+							<hr>
+							<div id="userholder">
+
+							</div>
+						</div>
+						<h5 id="userOnline"></h5>
+						<h5 id="messages"></h5>
+							
+					</div>
+					</div>
+
+				
+				<div id="messagesList" class="flex-grow-1">
+
+					<div id="messagesList" class="flex-grow-1"></div>
+			</div>
+		<center>
+			<form id="messageForm" class="flex">
+				<input  type="text" name="message " id="messageInput" class="flex-grow-1" autofocus>
+				<button id="sendBtn"><img src="https://cdn.pixabay.com/photo/2018/02/04/01/54/paper-planes-3128885_960_720.png"
+					 style="height: 50px;"></button>
+			</form>
+		</center>
+		</section>
+
+
+
+	</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+	<script src="app.js "></script>
+
+	<!-- <script>
+	// </script> -->
+</body>
+
+</html>
