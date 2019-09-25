@@ -403,7 +403,7 @@ $(document).ready(function () {
 	socket.on('typing', function (message, err) {
 		console.log(err);
 		messagesList.append('<h6 id="isTyping" style="color: black; font-size: 20px;"></h6>');
-		$('#isTyping').html(message.username + " is typing a message...");
+		$('#isTyping').html( "  typing a message...");
 		setTimeout(function () {
 			$("#isTyping").html('');
 		}, 3000);
